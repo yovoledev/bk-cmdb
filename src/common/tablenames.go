@@ -78,6 +78,9 @@ const (
 	BKTableNameNetcollectDevice   = "cc_Netcollect_Device"
 	BKTableNameNetcollectProperty = "cc_Netcollect_Property"
 
+	// add yovole test datacollection
+	BKTableNameYovoleTest = "cc_YovoleTest"
+
 	BKTableNameHostLock = "cc_HostLock"
 )
 

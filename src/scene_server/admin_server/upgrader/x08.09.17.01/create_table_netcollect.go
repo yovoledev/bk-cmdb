@@ -51,4 +51,12 @@ var tables = map[string][]dal.Index{
 		{Keys: map[string]interface{}{"netcollect_property_id": 1}, Background: true},
 		{Keys: map[string]interface{}{"bk_supplier_account": 1}, Background: true},
 	},
+
+	// add yovole test collection
+	common.BKTableNameYovoleTest: []dal.Index{
+		{Keys: map[string]interface{}{"bk_biz_id": 1}, Background: true},
+		{Keys: map[string]interface{}{"bk_host_id": 1}, Background: true},
+		{Keys: map[string]interface{}{"bk_host_innerip": 1}, Background: true},
+		{Keys: map[string]interface{}{"file_content": 1}, Background: true},
+	},
 }

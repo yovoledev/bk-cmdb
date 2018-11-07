@@ -20,6 +20,7 @@ import (
 	"configcenter/src/common/metric"
 	"configcenter/src/common/rdapi"
 	"configcenter/src/common/types"
+	"configcenter/src/scene_server/datacollection/logics"
 	"configcenter/src/storage/dal"
 
 	"github.com/emicklei/go-restful"
@@ -30,6 +31,7 @@ type Service struct {
 	*backbone.Engine
 	db    dal.RDB
 	cache *redis.Client
+	*logics.Logics
 }
 
 func (s *Service) SetDB(db dal.RDB) {
@@ -46,6 +48,8 @@ func (s *Service) WebService() *restful.WebService {
 		return s.CCErr
 	}
 	ws.Path("/collector/v3").Filter(rdapi.AllGlobalFilter(getErrFun)).Produces(restful.MIME_JSON).Consumes(restful.MIME_JSON)
+	ws.Route(ws.POST("/yovole/test/{bk_biz_id}/filecontent").To(s.GetFileContent))
+
 	ws.Route(ws.GET("/healthz").To(s.Healthz))
 
 	return ws
