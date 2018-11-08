@@ -20,10 +20,10 @@ module.exports = {
   dev: {
     // custom config
     config: Object.assign({}, config, {
-        'API_URL': '""',
+        'API_URL': '"https://cmdb.bk2.yovole.com/"',
         'API_VERSION': '"v3"',
-        'API_LOGIN': '""',
-        'AGENT_URL': 'null',
+        'API_LOGIN': '"https://paas.bk2.yovole.com/login/?app_id=bk_cmdb\u0026c_url=https://cmdb.bk2.yovole.com/"',
+        'AGENT_URL': '"https://paas.bk2.yovole.com/o/bk_nodeman/"',
         'BUILD_VERSION': 'dev',
         'USER_ROLE': '"1"',
         'USER_NAME': '"admin"'

@@ -39,9 +39,10 @@ module.exports = {
     // 允许出现未使用过的变量
     'no-unused-vars': 0,
     // 缩进使用4个空格，并且switch语句中的Case需要缩进
-    'indent': ['error', 4, {
+    /*'indent': ['error', 4, {
         'SwitchCase': 1
-    }],
+    }],*/
+    'indent': 'off',
     // 函数圆括号之前有一个空格
     'space-before-function-paren': ['error', {
         'anonymous': 'always', // 匿名函数表达式

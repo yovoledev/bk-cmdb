@@ -111,7 +111,8 @@
         "获取人员列表失败": "Failed to get user list",
         "其他筛选项": "Other filters",
         "清空": "Clear",
-        "帮助文档": "Help"
+        "帮助文档": "Help",
+        "有孚采集器测试": "Yovole Collector Test"
     },
     "Index": {
         "首页": "Index",

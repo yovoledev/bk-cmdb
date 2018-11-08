@@ -81,5 +81,14 @@
             "name": "操作审计",
             "classificationId": "bk_back_config"
         }]
+    },
+    "bk_yovole_test": {
+        "i18n": "Common['有孚采集器测试']",
+        "icon": "bk-icon icon-home-shape",
+        "id": "bk_yovole_test",
+        "name": "有孚采集器测试",
+        "path": "/yovoletest",
+        "classificationId": "bk_yovole_test",
+        "children": []
     }
 }
