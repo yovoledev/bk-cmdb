@@ -88,7 +88,7 @@
         "id": "bk_yovole_test",
         "name": "有孚采集器测试",
         "path": "/yovoletest",
-        "classificationId": "bk_yovole_test",
-        "children": []
+        "children": [],
+        "classificationId": "bk_yovole_test"
     }
 }

@@ -59,7 +59,7 @@
     export default {
         data () {
             return {
-                staticClassifyId: ['bk_index', 'bk_host_manage', 'bk_organization', 'bk_back_config'],
+                staticClassifyId: ['bk_index', 'bk_host_manage', 'bk_organization', 'bk_back_config', 'bk_yovole_test'],
                 routerLinkHeight: 36,
                 openedClassify: 'bk_index',
                 timer: null
@@ -89,7 +89,7 @@
             // 固定到前面的分类
             staticClassify () {
                 return this.authorizedNavigation.filter(classify => {
-                    if (classify.id === 'bk_index') {
+                    if (classify.id === 'bk_index' || classify.id === 'bk_yovole_test') {
                         return true
                     }
                     return this.staticClassifyId.includes(classify.id) && classify.children.length

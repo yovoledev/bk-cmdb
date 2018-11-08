@@ -100,7 +100,8 @@ const getters = {
             staticNavigation['bk_index'],
             staticNavigation['bk_host_manage'],
             ...navigation,
-            staticNavigation['bk_back_config']
+            staticNavigation['bk_back_config'],
+            staticNavigation['bk_yovole_test']
         ]
     }
 }
