@@ -20,9 +20,9 @@ module.exports = {
   dev: {
     // custom config
     config: Object.assign({}, config, {
-        'API_URL': '"https://cmdb.bk2.yovole.com/"',
+        'API_URL': '"http://cmdbui.bk2.yovole.com:9090/proxy/"',
         'API_VERSION': '"v3"',
-        'API_LOGIN': '"https://paas.bk2.yovole.com/login/?app_id=bk_cmdb\u0026c_url=https://cmdb.bk2.yovole.com/"',
+        'API_LOGIN': '"https://paas.bk2.yovole.com/login/?app_id=bk_cmdb\u0026c_url=http://cmdbui.bk2.yovole.com"',
         'AGENT_URL': '"https://paas.bk2.yovole.com/o/bk_nodeman/"',
         'BUILD_VERSION': 'dev',
         'USER_ROLE': '"1"',
@@ -32,10 +32,28 @@ module.exports = {
     // Paths
     assetsSubDirectory: '',
     assetsPublicPath: '/static/',
-    proxyTable: {},
+    proxyTable: {
+        '/proxy': {
+            logLevel: 'info',
+            changeOrigin: true,
+            secure: false,
+            target: 'https://cmdb.bk2.yovole.com/',
+            // protocolRewrite: 'https',
+            cookieDomainRewrite: {
+                "paas.bk2.yovole.com": "localhost",
+                "cmdb.bk2.yovole.com": "localhost"
+            },
+            // headers: {
+            //     Referer: 'https://cmdb.bk2.yovole.com/'
+            // },
+            pathRewrite: {
+                '^/proxy': ''
+            }
+        }
+    },
 
     // Various Dev Server settings
-    host: 'localhost', // can be overwritten by process.env.HOST
+    host: 'cmdbui.bk2.yovole.com', // can be overwritten by process.env.HOST
     port: 9090, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: true,
     errorOverlay: true,

@@ -9,9 +9,9 @@ const getters = {
 }
 
 const actions = {
-  yovoleSearchTest ({ commit, state, dispatch }, {bkBizId, config}) {
-    return $http.get(`collector/yovole/test/${bkBizId}/filecontent`, {}, config)
-  }
+    yovoleSearchTest ({ commit, state, dispatch }, {bkBizId, config}) {
+        return $http.get(`collector/yovole/test/${bkBizId}/filecontent`, {}, config)
+    }
 }
 
 const mutations = {
@@ -19,9 +19,9 @@ const mutations = {
 }
 
 export default {
-  namespaced: true,
-  state,
-  getters,
-  actions,
-  mutations
+    namespaced: true,
+    state,
+    getters,
+    actions,
+    mutations
 }
